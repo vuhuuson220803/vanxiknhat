@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="canvas.css">
+    <link rel="stylesheet" href="present.css">
+    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .right-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .right-image img, .circle-container img {
+            width: 100px; /* Adjust width as needed */
+            height: 100px; /* Adjust height as needed */
+            margin: 0 10px; /* Adjust margin as needed */
+            border-radius: 10px; /* Ensure they are rounded */
+        }
+
+        .circle-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .rotating-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: rotateBox 10s infinite linear; /* Adjust animation duration as needed */
+        }
+
+        @keyframes rotateBox {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <script src="jquery.js"></script>
+</head>
+<body>
+<div class="parent">
+    <canvas id="canvas"></canvas>
+    <section class="above-fold">
+        <div class="wrap-present">
+            <div class="present-box" id="present">
+                <div class="present">
+                    <div class="img-wrap" id="present-image"></div>
+                </div>
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side left"></div>
+                <div class="side right"></div>
+                <div class="side top">
+                    <span class="to">
+                        <span class="name" id="nametag"> </span>
+                    </span>
+                </div>
+                <div class="side bottom"></div>
+            </div>
+        </div>
+        <p class="info-text">Click to Open</p>
+    </section>
+
+    <div id="card">
+        <h4 class="title-card">💘Dear Vân💘</h4>
+
+        <img src="van2.png" class="honey"/>
+        
+        <h4 class="content-card">
+            Happy Birthday Make A Wish. Dear brother, hope you receive everything you wish for this year. You deserve the best! Thanks for being such a great brother.💘
+        </h4>
+    </div>
+</div>
+<div class="right-image">
+    <img src="van2.png" alt="Your Image">
+    <img src="van3.jpg" alt="Small Image 1">
+    <img src="van4.jpg" alt="Small Image 2">
+    <img src="van5.jpg" alt="Small Image 3">
+    <img src="van6.jpg" alt="Small Image 4">
+    <img src="van7.jpg" alt="Small Image 5">
+</div>
+
+<audio autoplay loop id="playAudio">
+    <source src="nhacnen.mp3">
+</audio>
+</body>
+<script src="config.js"></script>
+<script src="canvas.js"></script>
+<script src="present.js"></script>
+<script>
+    
+</script>
+</html>
